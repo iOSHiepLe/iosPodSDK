@@ -1,0 +1,43 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-ios12.2 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name screenshot_protection
+import Flutter
+import ScreenShieldKit
+import Swift
+import UIKit
+import _Concurrency
+@_exported import screenshot_protection
+@objc @_inheritsConvenienceInitializers public class SwiftScreenshotProtectionPlugin : ObjectiveC.NSObject, Flutter.FlutterPlugin {
+  @objc public static func register(with registrar: Flutter.FlutterPluginRegistrar)
+  @objc public func handle(_ call: Flutter.FlutterMethodCall, result: @escaping Flutter.FlutterResult)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ProtectedImageViewFactory : ObjectiveC.NSObject, Flutter.FlutterPlatformViewFactory {
+  @objc public func create(withFrame frame: CoreGraphics.CGRect, viewIdentifier viewId: Swift.Int64, arguments args: Any?) -> Flutter.FlutterPlatformView
+  @objc public func createArgsCodec() -> Flutter.FlutterMessageCodec & ObjectiveC.NSObjectProtocol
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class ProtectedImageView : ObjectiveC.NSObject, Flutter.FlutterPlatformView {
+  @objc public func view() -> UIKit.UIView
+  @objc deinit
+}
+extension UIKit.UIView {
+  public enum EdgeContraint : Swift.Int {
+    case leading
+    case top
+    case trailing
+    case bottom
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @_Concurrency.MainActor(unsafe) public func addCentralView(_ view: UIKit.UIView, offset: CoreGraphics.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func addInnerEdgeConstraint(_ view: UIKit.UIView? = nil, types: [UIKit.UIView.EdgeContraint], offset: CoreGraphics.CGFloat, priority: UIKit.UILayoutPriority = .required) -> [UIKit.NSLayoutConstraint]
+}
+extension UIKit.UIView.EdgeContraint : Swift.Equatable {}
+extension UIKit.UIView.EdgeContraint : Swift.Hashable {}
+extension UIKit.UIView.EdgeContraint : Swift.RawRepresentable {}
