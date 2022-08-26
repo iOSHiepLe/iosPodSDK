@@ -2,8 +2,7 @@ import Flutter
 import UIKit
 
 public class TixngoManager {
-    
-    static let instance = TixngoManager()
+    public static let instance = TixngoManager()
         
     private let sdk: TixngoSdk
     
