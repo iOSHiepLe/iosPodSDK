@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/beacon.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		Lj8VbbbZCyxE1OJJc0X3kpj9mcc=
+		UPCQDFVZLGv79AGGLkRgq2PElIk=
 		</data>
 		<key>Modules/beacon.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/beacon.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		suSLym7S4/P0wYOHHe2bS1Tw7iE=
+		XdNKw6R1ylblG4BZtFq9jUpFSps=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -80,11 +80,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Lj8VbbbZCyxE1OJJc0X3kpj9mcc=
+			UPCQDFVZLGv79AGGLkRgq2PElIk=
 			</data>
 			<key>hash2</key>
 			<data>
-			6TXfpYwgHM74YhqH3W8qByB/YfJN/I7mcPZihWeMVlc=
+			7XFseNuZj6BUk5+EOBEwnPXKKM5FUY4T2LWz66j7da0=
 			</data>
 		</dict>
 		<key>Modules/beacon.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -113,11 +113,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			suSLym7S4/P0wYOHHe2bS1Tw7iE=
+			XdNKw6R1ylblG4BZtFq9jUpFSps=
 			</data>
 			<key>hash2</key>
 			<data>
-			TWTxCXPua6ZROiAZ+bwMljIDJLKFJOU4KPFzNxZ1jao=
+			IX8u8OPKL9ZWo42rKcmIuMuRSTOXIdF/mio28Dw7xj8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

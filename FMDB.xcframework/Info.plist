@@ -5,6 +5,10 @@
 	<key>AvailableLibraries</key>
 	<array>
 		<dict>
+			<key>BitcodeSymbolMapsPath</key>
+			<string>BCSymbolMaps</string>
+			<key>DebugSymbolsPath</key>
+			<string>dSYMs</string>
 			<key>LibraryIdentifier</key>
 			<string>ios-arm64_armv7</string>
 			<key>LibraryPath</key>

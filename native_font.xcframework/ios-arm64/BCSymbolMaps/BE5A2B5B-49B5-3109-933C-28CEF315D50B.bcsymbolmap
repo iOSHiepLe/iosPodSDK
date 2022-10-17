@@ -1,0 +1,73 @@
+BCSymbolMap Version: 2.0
+Apple clang version 13.1.6 (clang-1316.0.21.2.5)
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk
+iPhoneOS15.5.sdk
+/Users/lemh/Desktop/iosSDK1/Release/iphoneos/Pods.build/Release-iphoneos/native_font.build/DerivedSources/native_font_vers.c
+/Users/lemh/Documents/workspace/tyxr-app-sdk/sdk/.ios/Pods
+__OBJC_METACLASS_RO_$_PodsDummy_native_font
+__OBJC_CLASS_RO_$_PodsDummy_native_font
+/Users/lemh/Documents/workspace/tyxr-app-sdk/sdk/.ios/Pods/Target Support Files/native_font/native_font-dummy.m
++[NativeFontPlugin registerWithRegistrar:]
+___42+[NativeFontPlugin registerWithRegistrar:]_block_invoke
+___42+[NativeFontPlugin registerWithRegistrar:]_block_invoke_2
+___copy_helper_block_e8_32b
+___destroy_helper_block_e8_32s
++[NativeFontPlugin fontDataHandler]
++[NativeFontPlugin setFontDataHandler:]
+_OBJC_CLASSLIST_REFERENCES_$_
+_OBJC_SELECTOR_REFERENCES_
+_OBJC_CLASSLIST_REFERENCES_$_.1
+_OBJC_SELECTOR_REFERENCES_.3
+_OBJC_SELECTOR_REFERENCES_.5
+___block_descriptor_32_e18_v24?08?<v?>16l
+___block_literal_global
+_OBJC_CLASSLIST_REFERENCES_$_.7
+_OBJC_SELECTOR_REFERENCES_.9
+_OBJC_SELECTOR_REFERENCES_.11
+_OBJC_CLASSLIST_REFERENCES_$_.12
+_OBJC_SELECTOR_REFERENCES_.14
+_OBJC_SELECTOR_REFERENCES_.18
+_OBJC_SELECTOR_REFERENCES_.22
+_OBJC_SELECTOR_REFERENCES_.26
+_OBJC_CLASSLIST_REFERENCES_$_.27
+_OBJC_SELECTOR_REFERENCES_.29
+___block_descriptor_40_e8_32bs_e16_v16?0"NSData"8l
+_OBJC_SELECTOR_REFERENCES_.32
+__fontDataHandler
+_OBJC_SELECTOR_REFERENCES_.34
+__OBJC_$_CLASS_METHODS_NativeFontPlugin
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_NSObject
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSObject
+__OBJC_$_PROP_LIST_NSObject
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSObject
+__OBJC_PROTOCOL_$_NSObject
+__OBJC_LABEL_PROTOCOL_$_NSObject
+__OBJC_$_PROTOCOL_REFS_UNUserNotificationCenterDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_UNUserNotificationCenterDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_UNUserNotificationCenterDelegate
+__OBJC_PROTOCOL_$_UNUserNotificationCenterDelegate
+__OBJC_LABEL_PROTOCOL_$_UNUserNotificationCenterDelegate
+__OBJC_$_PROTOCOL_REFS_FlutterApplicationLifeCycleDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_FlutterApplicationLifeCycleDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_FlutterApplicationLifeCycleDelegate
+__OBJC_PROTOCOL_$_FlutterApplicationLifeCycleDelegate
+__OBJC_LABEL_PROTOCOL_$_FlutterApplicationLifeCycleDelegate
+__OBJC_$_PROTOCOL_REFS_FlutterPlugin
+__OBJC_$_PROTOCOL_CLASS_METHODS_FlutterPlugin
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_FlutterPlugin
+__OBJC_$_PROTOCOL_CLASS_METHODS_OPT_FlutterPlugin
+__OBJC_$_PROTOCOL_METHOD_TYPES_FlutterPlugin
+__OBJC_PROTOCOL_$_FlutterPlugin
+__OBJC_LABEL_PROTOCOL_$_FlutterPlugin
+__OBJC_CLASS_PROTOCOLS_$_NativeFontPlugin
+__OBJC_$_CLASS_PROP_LIST_NativeFontPlugin
+__OBJC_METACLASS_RO_$_NativeFontPlugin
+__OBJC_$_PROP_LIST_NativeFontPlugin
+__OBJC_CLASS_RO_$_NativeFontPlugin
+/Users/lemh/developer/flutter/.pub-cache/hosted/pub.dartlang.org/native_font-1.1.0/ios/Classes/NativeFontPlugin.m
+developer/flutter/.pub-cache/hosted/pub.dartlang.org/native_font-1.1.0/ios/Classes/NativeFontPlugin.m
+/Users/lemh
+__destroy_helper_block_e8_32s
+__copy_helper_block_e8_32b
+__42+[NativeFontPlugin registerWithRegistrar:]_block_invoke_2
+__42+[NativeFontPlugin registerWithRegistrar:]_block_invoke

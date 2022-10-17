@@ -18,15 +18,15 @@
 		</data>
 		<key>Modules/KeychainSwift.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		vky887OsoXBVag7zIOcSGbfPfkc=
+		IC7ubpKjF51VfhsROq3oA7gsxrg=
 		</data>
 		<key>Modules/KeychainSwift.swiftmodule/Project/i386-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		jUonmMqzNB2qzhCpfUGgDSiPK8I=
+		yP1sVZ+g7I1EPu9Fos/8sV8kLv4=
 		</data>
 		<key>Modules/KeychainSwift.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		HlZK/jBewZIWVbls1vPH7jueKbE=
+		OQoEBAcvB1Z8DVp9uYvdMaNgtT8=
 		</data>
 		<key>Modules/KeychainSwift.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/KeychainSwift.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		5wiTtjLI2khEjxQnXxDDd0uOC8A=
+		+nKhLGS2NLow8q3MNgdOnPRkauY=
 		</data>
 		<key>Modules/KeychainSwift.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/KeychainSwift.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		YqxI/D4/3TzaoRPd98tfTVan8b8=
+		BU4IHHP1Nfv7O8pO5jXOVTrH5v0=
 		</data>
 		<key>Modules/KeychainSwift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/KeychainSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		0GPgZwlPvbCaPHz+8RwkeombKxQ=
+		23TGRq8O6z9yOW60HOBRdeMmsG8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -97,33 +97,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vky887OsoXBVag7zIOcSGbfPfkc=
+			IC7ubpKjF51VfhsROq3oA7gsxrg=
 			</data>
 			<key>hash2</key>
 			<data>
-			IS0d1CnZYwz1vYEYlZ97H9PWKx2viu1CCE1eftTM14M=
+			RyzjFYuBjdN6PzZkeNGD7WkyOCmKjiTIZIare78HMcU=
 			</data>
 		</dict>
 		<key>Modules/KeychainSwift.swiftmodule/Project/i386-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jUonmMqzNB2qzhCpfUGgDSiPK8I=
+			yP1sVZ+g7I1EPu9Fos/8sV8kLv4=
 			</data>
 			<key>hash2</key>
 			<data>
-			lB1JfCsJR9+b4ehZ40XSb0WKX7UTu1XPc+kcNnWPghE=
+			2/WCEGKVpd7mj9ED95+T2kXVHf7dimIbac11qm2wRRA=
 			</data>
 		</dict>
 		<key>Modules/KeychainSwift.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HlZK/jBewZIWVbls1vPH7jueKbE=
+			OQoEBAcvB1Z8DVp9uYvdMaNgtT8=
 			</data>
 			<key>hash2</key>
 			<data>
-			bMHm/AYu5/aVsF9di+XQ8oM2RTLwzPLJDKzuUu0nj4s=
+			NLNEkdPCufeofgxDQTz0ZEp6f2DwRWSI3yHVjABVAyc=
 			</data>
 		</dict>
 		<key>Modules/KeychainSwift.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -152,11 +152,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5wiTtjLI2khEjxQnXxDDd0uOC8A=
+			+nKhLGS2NLow8q3MNgdOnPRkauY=
 			</data>
 			<key>hash2</key>
 			<data>
-			aFik/XLf/fB6grDYr4lUYufauVh5pKQanOooUzz1F6s=
+			Kg4ukXkxgsrFjqtvF+8+e51je9IlGQFKsgpMklzwgiM=
 			</data>
 		</dict>
 		<key>Modules/KeychainSwift.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
@@ -185,11 +185,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YqxI/D4/3TzaoRPd98tfTVan8b8=
+			BU4IHHP1Nfv7O8pO5jXOVTrH5v0=
 			</data>
 			<key>hash2</key>
 			<data>
-			9XsiHJFkOJT1UNeDmYKcSLNnaUqv/e1n2zIjt6rsUrU=
+			7pojhXu7thyhcKryQT9Brl9RTF4KneYiJdP13PF+4hw=
 			</data>
 		</dict>
 		<key>Modules/KeychainSwift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -218,11 +218,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0GPgZwlPvbCaPHz+8RwkeombKxQ=
+			23TGRq8O6z9yOW60HOBRdeMmsG8=
 			</data>
 			<key>hash2</key>
 			<data>
-			CDit7HII2wa1Et9FripzdTntak22E/EGfYffDnShbN4=
+			JAXWRCCGymV8w9ZUS2hZLrLCBZOkUB1uPTcifXvAenU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

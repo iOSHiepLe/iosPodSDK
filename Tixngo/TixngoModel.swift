@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class TixngoProfile {
+public class TixngoProfile {
     
     private let firstName: String
     private let lastName: String
@@ -18,7 +18,7 @@ class TixngoProfile {
     private let birthCountry: String?
     private let residenceCountry: String?
     
-    init (firstName: String, lastName: String, gender: TixngoGender, face: String?, dateOfBirth: Date?, nationality: String?,
+    public init (firstName: String, lastName: String, gender: TixngoGender, face: String?, dateOfBirth: Date?, nationality: String?,
           passportNumber: String?, idCardNumber: String?, email: String?, phoneNumber: String?, address: TixngoAddress?,
           birthCity: String?, birthCountry: String?, residenceCountry: String?) {
         self.firstName = firstName
@@ -81,7 +81,7 @@ class TixngoProfile {
     
 }
 
-class TixngoAddress {
+public class TixngoAddress {
     
     private let line1: String
     private let line2: String?
@@ -118,7 +118,7 @@ class TixngoAddress {
     
 }
 
-class TixngoPushNotification {
+public class TixngoPushNotification {
     
     private let data: [String: Any]?
     private let notification: [String: Any]?
