@@ -18,6 +18,7 @@ public class TixngoManager {
     private let getAuthStatus = "sdk.get_auth_status"
     private let processPushMessage = "sdk.process_push_message"
     private let processPushDeviceToken = "sdk.process_push_device_token"
+    private let getConfigs = "getConfigs"
     
     // ----- Request: Sdk --> Native -----//
     private let onTokenExpired = "sdk.on_token_expired"
@@ -40,6 +41,7 @@ public class TixngoManager {
      + onCloseHandler: SDK notify app that user tap close button, app should close SDK UI and return to app UI
     */
     public final func initialize(
+        config: TixngoConfiguration?,
         onInitializedHandler: @escaping ((_ isAuthenticated: Bool) -> Void),
         onTokenExpiredHandler: @escaping ((@escaping (_ shouldRetry: Bool) -> Void) -> Void),
         onGetJwtTokenHandler: @escaping ((@escaping (_ jwtToken: String?) -> Void) -> Void),
@@ -71,23 +73,17 @@ public class TixngoManager {
             } else if method == self.onDebug {
                 print("Debug log \(String(describing: args!))")
                 result(nil)
-            } else if method == "getConfigs" {
-                self.configTixngo(result: result)
+            } else if method == self.getConfigs {
+                self.configTixngo(with: config, result: result)
             } else {
                 print("Method \(method) - Arguments \(String(describing: args))")
                 result(nil)
             }
         }
-        
-//        let config = TixngoConfiguration(sskLicenseKey: "test", isEnableDebug: true, defaultEnv: "INT", font: "")
-//        DispatchQueue.main.async {
-//            self.sdk.sendMessage("getConfigs", arguments: config.json, result: nil)
-//        }
     }
     
-    private func configTixngo(result: FlutterResult) {
-        let config = TixngoConfiguration(sskLicenseKey: "test", isEnableDebug: true, defaultEnv: "INT", font: "")
-        result(config.json)
+    private func configTixngo(with config: TixngoConfiguration?, result: FlutterResult) {
+        result(config?.json ?? TixngoConfiguration.default.json)
     }
     
     /*

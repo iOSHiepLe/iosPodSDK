@@ -195,16 +195,86 @@ fileprivate extension Date {
     }
 }
 
-struct TixngoConfiguration {
+public struct TixngoConfiguration {
     let sskLicenseKey: String?
     let isEnableDebug: Bool
     let defaultEnv: String
-    let font: String
+    let isEnableWallet: Bool?
+    let isCheckAppStatus: Bool?
+    let supportLanguages: [String]
+    let defaultLanguage: String?
+    let theme: TixngoTheme?
+      
+    public init(licenseKey: String? = nil,
+                isEnableDebug: Bool = false,
+                defaultEnv: String,
+                isEnableWallet: Bool?,
+                isCheckAppStatus: Bool?,
+                supportLanguages: [String] = [],
+                defaultLanguage: String?,
+                theme: TixngoTheme?) {
+        self.sskLicenseKey = licenseKey
+        self.isEnableDebug = isEnableDebug
+        self.defaultEnv = defaultEnv
+        self.isEnableWallet = isEnableWallet
+        self.isCheckAppStatus = isCheckAppStatus
+        self.supportLanguages = supportLanguages
+        self.defaultLanguage = defaultLanguage
+        self.theme = theme
+    }
     
-    var json: [String: Any] {
+    var json: [String: Any?] {
         return ["sskLicenseKey": sskLicenseKey ?? "",
                 "isEnableDebug": isEnableDebug,
                 "defaultEnv": defaultEnv,
-                "font": font]
+                "isEnableWallet": isEnableWallet ?? false,
+                "isCheckAppStatus": isCheckAppStatus ?? false,
+                "supportLanguages": supportLanguages,
+                "defaultLanguage": defaultLanguage,
+                "theme": theme?.json
+                ]
+    }
+    
+    static var `default`: TixngoConfiguration {
+        let theme = TixngoTheme(font: "Qatar2022", colors: TixngoColor(primary: "0xff00a9b8", secondary: "0xff124254"))
+        return TixngoConfiguration(licenseKey: "MEYCIQDO4RS/aRJmaKnRZOaq9FOYNehpX9s4FqTdiNf6flbkcAIhANK7ToiL/EANI1vCIRchcny5SHI8cYbzz3KiyfeZf6SX",
+                                   isEnableDebug: true,
+                                   defaultEnv: "INT",
+                                   isEnableWallet: false,
+                                   isCheckAppStatus: false,
+                                   defaultLanguage: "en",
+                                   theme: theme)
+    }
+}
+
+public struct TixngoTheme {
+    let font: String
+    let colors: TixngoColor
+    
+    public init(font: String, colors: TixngoColor) {
+        self.font = font
+        self.colors = colors
+    }
+    
+    var json: [String: Any?] {
+        return ["font": font,
+                "colors": colors.json
+                ]
+    }
+}
+
+public struct TixngoColor {
+    let primary: String?
+    let secondary: String?
+    
+    public init(primary: String?, secondary: String?) {
+        self.primary = primary
+        self.secondary = secondary
+    }
+    
+    var json: [String: Any?] {
+        return ["primary": primary,
+                "secondary": secondary
+                ]
     }
 }
