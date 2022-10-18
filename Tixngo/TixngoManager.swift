@@ -71,16 +71,23 @@ public class TixngoManager {
             } else if method == self.onDebug {
                 print("Debug log \(String(describing: args!))")
                 result(nil)
+            } else if method == "getConfigs" {
+                self.configTixngo(result: result)
             } else {
                 print("Method \(method) - Arguments \(String(describing: args))")
                 result(nil)
             }
         }
         
+//        let config = TixngoConfiguration(sskLicenseKey: "test", isEnableDebug: true, defaultEnv: "INT", font: "")
+//        DispatchQueue.main.async {
+//            self.sdk.sendMessage("getConfigs", arguments: config.json, result: nil)
+//        }
+    }
+    
+    private func configTixngo(result: FlutterResult) {
         let config = TixngoConfiguration(sskLicenseKey: "test", isEnableDebug: true, defaultEnv: "INT", font: "")
-        DispatchQueue.main.async {
-            self.sdk.sendMessage("getConfigs", arguments: config.json, result: nil)
-        }
+        result(config.json)
     }
     
     /*

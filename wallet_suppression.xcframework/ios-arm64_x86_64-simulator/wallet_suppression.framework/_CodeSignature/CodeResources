@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/wallet_suppression.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		3w3eWz1VvcaXKdfVwXOKkdo8ioE=
+		B5TyNhcJqoGOmh9oGCW9TVidV2o=
 		</data>
 		<key>Modules/wallet_suppression.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/wallet_suppression.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		MA0gufB2oxiv2EztYfS9b4OkSpU=
+		v32ZLnRPC0GrcN2ROzQj3HR2hug=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -151,11 +151,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3w3eWz1VvcaXKdfVwXOKkdo8ioE=
+			B5TyNhcJqoGOmh9oGCW9TVidV2o=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZKXD9sdsmWT0iT1KfEHwfHd1gYlRJcydN8W1fcuofFE=
+			5bUor9f2K6Km/q8tnrgCvUJJ3upRmV2q82tSuZgd2fY=
 			</data>
 		</dict>
 		<key>Modules/wallet_suppression.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -184,11 +184,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MA0gufB2oxiv2EztYfS9b4OkSpU=
+			v32ZLnRPC0GrcN2ROzQj3HR2hug=
 			</data>
 			<key>hash2</key>
 			<data>
-			EqHyJi0f6JCiSUnMr4cVSxX6mvL2p7FPHMywmD7hBF4=
+			9RtwQazOBNuA5aKnPDmVX2yAaR8YI/cxOkQxIoZ1S6E=
 			</data>
 		</dict>
 	</dict>

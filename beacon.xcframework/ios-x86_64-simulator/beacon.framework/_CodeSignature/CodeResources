@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/beacon.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		XdNKw6R1ylblG4BZtFq9jUpFSps=
+		4hZKnCOHxwPQfnW/QPMGLufE7Vg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -113,11 +113,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XdNKw6R1ylblG4BZtFq9jUpFSps=
+			4hZKnCOHxwPQfnW/QPMGLufE7Vg=
 			</data>
 			<key>hash2</key>
 			<data>
-			IX8u8OPKL9ZWo42rKcmIuMuRSTOXIdF/mio28Dw7xj8=
+			bbTSzYBFw84erTbjerMEuRYtJF5mfiP1tveZnypw4SM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
