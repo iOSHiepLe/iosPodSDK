@@ -194,3 +194,17 @@ fileprivate extension Date {
         return formatter.string(from: self)
     }
 }
+
+struct TixngoConfiguration {
+    let sskLicenseKey: String?
+    let isEnableDebug: Bool
+    let defaultEnv: String
+    let font: String
+    
+    var json: [String: Any] {
+        return ["sskLicenseKey": sskLicenseKey ?? "",
+                "isEnableDebug": isEnableDebug,
+                "defaultEnv": defaultEnv,
+                "font": font]
+    }
+}
