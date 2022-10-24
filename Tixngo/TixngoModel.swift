@@ -170,6 +170,7 @@ public class TixngoPushNotification {
     
 }
 
+// Environments support by Tixngo
 public enum TixngoEnv: String {
     case demo       = "DEMO"
     case int        = "INT"
@@ -185,6 +186,17 @@ public enum TixngoGender: String {
     case unknown    = "unknown"
 }
 
+// All languages support by Tixngo
+public enum TixngoLanguages: String {
+    case en = "en"
+    case ar = "ar"
+    case de = "de"
+    case ca = "ca"
+    case es = "es"
+    case fr = "fr"
+    case no = "no"
+}
+
 fileprivate extension Date {
     func toDobString() -> String {
         let formatter = DateFormatter()
@@ -198,20 +210,20 @@ fileprivate extension Date {
 public struct TixngoConfiguration {
     let sskLicenseKey: String?
     let isEnableDebug: Bool
-    let defaultEnv: String
+    let defaultEnv: TixngoEnv
     let isEnableWallet: Bool?
     let isCheckAppStatus: Bool?
-    let supportLanguages: [String]
-    let defaultLanguage: String?
+    let supportLanguages: [TixngoLanguages]
+    let defaultLanguage: TixngoLanguages?
     let theme: TixngoTheme?
       
     public init(licenseKey: String? = nil,
                 isEnableDebug: Bool = false,
-                defaultEnv: String,
+                defaultEnv: TixngoEnv,
                 isEnableWallet: Bool?,
                 isCheckAppStatus: Bool?,
-                supportLanguages: [String] = [],
-                defaultLanguage: String?,
+                supportLanguages: [TixngoLanguages] = [],
+                defaultLanguage: TixngoLanguages?,
                 theme: TixngoTheme?) {
         self.sskLicenseKey = licenseKey
         self.isEnableDebug = isEnableDebug
@@ -226,23 +238,24 @@ public struct TixngoConfiguration {
     var json: [String: Any?] {
         return ["sskLicenseKey": sskLicenseKey ?? "",
                 "isEnableDebug": isEnableDebug,
-                "defaultEnv": defaultEnv,
+                "defaultEnv": defaultEnv.rawValue,
                 "isEnableWallet": isEnableWallet ?? false,
                 "isCheckAppStatus": isCheckAppStatus ?? false,
-                "supportLanguages": supportLanguages,
-                "defaultLanguage": defaultLanguage,
+                "supportLanguages": supportLanguages.map({$0.rawValue}),
+                "defaultLanguage": defaultLanguage?.rawValue,
                 "theme": theme?.json
                 ]
     }
     
     static var `default`: TixngoConfiguration {
-        let theme = TixngoTheme(font: "Qatar2022", colors: TixngoColor(primary: "0xff00a9b8", secondary: "0xff124254"))
+        let theme = TixngoTheme(font: "Qatar2022",
+                                colors: TixngoColor(primary: "0xff00a9b8", secondary: "0xff124254"))
         return TixngoConfiguration(licenseKey: "MEYCIQDO4RS/aRJmaKnRZOaq9FOYNehpX9s4FqTdiNf6flbkcAIhANK7ToiL/EANI1vCIRchcny5SHI8cYbzz3KiyfeZf6SX",
                                    isEnableDebug: true,
-                                   defaultEnv: "INT",
+                                   defaultEnv: .int,
                                    isEnableWallet: false,
                                    isCheckAppStatus: false,
-                                   defaultLanguage: "en",
+                                   defaultLanguage: .en,
                                    theme: theme)
     }
 }
@@ -266,15 +279,112 @@ public struct TixngoTheme {
 public struct TixngoColor {
     let primary: String?
     let secondary: String?
+    let background: String?
+    let barcode: String?
+    let activationGreen: String?
+    let activationBlue: String?
+    let activationLightBlue: String?
+    let activationYellow: String?
+    let activationRed: String?
+    let activationBlack: String?
+    let greyBanner: String?
+    let redBanner: String?
+    let eventDetailPageBackground01: String?
+    let deleteAccountPageBackground01: String?
+    let pendingTransferItemBanner01: String?
+    let transferHistoryItemBanner01: String?
+    let transferHistoryItemBanner02: String?
+    let deletedTicketItemBanner01: String?
+    let tooltip: String?
+    let eventDetailPageBanner01: String?
+    let deleteAccountCompletedPageIcon01: String?
+    let greenBanner: String?
+    let ticketGeneralInfoIconColor: String?
+    let recipientConfirmationPageBackground01: String?
+    let transferCompletePageBackground01: String?
+    let myGroupColor01: String?
     
-    public init(primary: String?, secondary: String?) {
+    public init(primary: String? = nil,
+                secondary: String? = nil,
+                background: String? = nil,
+                barcode: String? = nil,
+                activationGreen: String? = nil,
+                activationBlue: String? = nil,
+                activationLightBlue: String? = nil,
+                activationYellow: String? = nil,
+                activationRed: String? = nil,
+                activationBlack: String? = nil,
+                greyBanner: String? = nil,
+                redBanner: String? = nil,
+                eventDetailPageBackground01: String? = nil,
+                deleteAccountPageBackground01: String? = nil,
+                pendingTransferItemBanner01: String? = nil,
+                transferHistoryItemBanner01: String? = nil,
+                transferHistoryItemBanner02: String? = nil,
+                deletedTicketItemBanner01: String? = nil,
+                tooltip: String? = nil,
+                eventDetailPageBanner01: String? = nil,
+                deleteAccountCompletedPageIcon01: String? = nil,
+                greenBanner: String? = nil,
+                ticketGeneralInfoIconColor: String? = nil,
+                recipientConfirmationPageBackground01: String? = nil,
+                transferCompletePageBackground01: String? = nil,
+                myGroupColor01: String? = nil) {
         self.primary = primary
         self.secondary = secondary
+        self.background = background
+        self.barcode = barcode
+        self.activationGreen = activationGreen
+        self.activationBlue = activationBlue
+        self.activationLightBlue = activationLightBlue
+        self.activationYellow = activationYellow
+        self.activationRed = activationRed
+        self.activationBlack = activationBlack
+        self.greyBanner = greyBanner
+        self.redBanner = redBanner
+        self.eventDetailPageBackground01 = eventDetailPageBackground01
+        self.deleteAccountPageBackground01 = deleteAccountPageBackground01
+        self.pendingTransferItemBanner01 = pendingTransferItemBanner01
+        self.transferHistoryItemBanner01 = transferHistoryItemBanner01
+        self.transferHistoryItemBanner02 = transferHistoryItemBanner02
+        self.deletedTicketItemBanner01 = deletedTicketItemBanner01
+        self.tooltip = tooltip
+        self.eventDetailPageBanner01 = eventDetailPageBanner01
+        self.deleteAccountCompletedPageIcon01 = deleteAccountCompletedPageIcon01
+        self.greenBanner = greenBanner
+        self.ticketGeneralInfoIconColor = ticketGeneralInfoIconColor
+        self.recipientConfirmationPageBackground01 = recipientConfirmationPageBackground01
+        self.transferCompletePageBackground01 = transferCompletePageBackground01
+        self.myGroupColor01 = myGroupColor01
     }
     
     var json: [String: Any?] {
         return ["primary": primary,
-                "secondary": secondary
+                "secondary": secondary,
+                "background": background,
+                "barcode": barcode,
+                "activationGreen": activationGreen,
+                "activationBlue": activationBlue,
+                "activationLightBlue": activationLightBlue,
+                "activationYellow": activationYellow,
+                "activationRed": activationRed,
+                "activationBlack": activationBlack,
+                "greyBanner": greyBanner,
+                "redBanner": redBanner,
+                "eventDetailPageBackground01": eventDetailPageBackground01,
+                "deleteAccountPageBackground01": deleteAccountPageBackground01,
+                "pendingTransferItemBanner01": pendingTransferItemBanner01,
+                "transferHistoryItemBanner01": transferHistoryItemBanner01,
+                "transferHistoryItemBanner02": transferHistoryItemBanner02,
+                "deletedTicketItemBanner01": deletedTicketItemBanner01,
+                "tooltip": tooltip,
+                "eventDetailPageBanner01": eventDetailPageBanner01,
+                "deleteAccountCompletedPageIcon01": deleteAccountCompletedPageIcon01,
+                "greenBanner": greenBanner,
+                "ticketGeneralInfoIconColor": ticketGeneralInfoIconColor,
+                "recipientConfirmationPageBackground01": recipientConfirmationPageBackground01,
+                "transferCompletePageBackground01": transferCompletePageBackground01,
+                "myGroupColor01": myGroupColor01,
                 ]
     }
 }
