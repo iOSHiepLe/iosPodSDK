@@ -249,7 +249,7 @@ public struct TixngoConfiguration {
     
     static var `default`: TixngoConfiguration {
         let theme = TixngoTheme(font: "Qatar2022",
-                                colors: TixngoColor(primary: "0xff00a9b8", secondary: "0xff124254"))
+                                colors: TixngoColor(primary: .yellow, secondary: .red))
         return TixngoConfiguration(licenseKey: "MEYCIQDO4RS/aRJmaKnRZOaq9FOYNehpX9s4FqTdiNf6flbkcAIhANK7ToiL/EANI1vCIRchcny5SHI8cYbzz3KiyfeZf6SX",
                                    isEnableDebug: true,
                                    defaultEnv: .int,
@@ -262,74 +262,77 @@ public struct TixngoConfiguration {
 
 public struct TixngoTheme {
     let font: String
-    let colors: TixngoColor
+    let colors: TixngoColor?
+    let buttons: TixngoButtons?
     
-    public init(font: String, colors: TixngoColor) {
+    public init(font: String, colors: TixngoColor? = nil, buttons: TixngoButtons? = nil) {
         self.font = font
         self.colors = colors
+        self.buttons = buttons
     }
     
     var json: [String: Any?] {
         return ["font": font,
-                "colors": colors.json
+                "colors": colors?.json,
+                "buttons": buttons?.json
                 ]
     }
 }
 
 public struct TixngoColor {
-    let primary: String?
-    let secondary: String?
-    let background: String?
-    let barcode: String?
-    let activationGreen: String?
-    let activationBlue: String?
-    let activationLightBlue: String?
-    let activationYellow: String?
-    let activationRed: String?
-    let activationBlack: String?
-    let greyBanner: String?
-    let redBanner: String?
-    let eventDetailPageBackground01: String?
-    let deleteAccountPageBackground01: String?
-    let pendingTransferItemBanner01: String?
-    let transferHistoryItemBanner01: String?
-    let transferHistoryItemBanner02: String?
-    let deletedTicketItemBanner01: String?
-    let tooltip: String?
-    let eventDetailPageBanner01: String?
-    let deleteAccountCompletedPageIcon01: String?
-    let greenBanner: String?
-    let ticketGeneralInfoIconColor: String?
-    let recipientConfirmationPageBackground01: String?
-    let transferCompletePageBackground01: String?
-    let myGroupColor01: String?
+    let primary: UIColor?
+    let secondary: UIColor?
+    let background: UIColor?
+    let barcode: UIColor?
+    let activationGreen: UIColor?
+    let activationBlue: UIColor?
+    let activationLightBlue: UIColor?
+    let activationYellow: UIColor?
+    let activationRed: UIColor?
+    let activationBlack: UIColor?
+    let greyBanner: UIColor?
+    let redBanner: UIColor?
+    let eventDetailPageBackground01: UIColor?
+    let deleteAccountPageBackground01: UIColor?
+    let pendingTransferItemBanner01: UIColor?
+    let transferHistoryItemBanner01: UIColor?
+    let transferHistoryItemBanner02: UIColor?
+    let deletedTicketItemBanner01: UIColor?
+    let tooltip: UIColor?
+    let eventDetailPageBanner01: UIColor?
+    let deleteAccountCompletedPageIcon01: UIColor?
+    let greenBanner: UIColor?
+    let ticketGeneralInfoIconColor: UIColor?
+    let recipientConfirmationPageBackground01: UIColor?
+    let transferCompletePageBackground01: UIColor?
+    let myGroupColor01: UIColor?
     
-    public init(primary: String? = nil,
-                secondary: String? = nil,
-                background: String? = nil,
-                barcode: String? = nil,
-                activationGreen: String? = nil,
-                activationBlue: String? = nil,
-                activationLightBlue: String? = nil,
-                activationYellow: String? = nil,
-                activationRed: String? = nil,
-                activationBlack: String? = nil,
-                greyBanner: String? = nil,
-                redBanner: String? = nil,
-                eventDetailPageBackground01: String? = nil,
-                deleteAccountPageBackground01: String? = nil,
-                pendingTransferItemBanner01: String? = nil,
-                transferHistoryItemBanner01: String? = nil,
-                transferHistoryItemBanner02: String? = nil,
-                deletedTicketItemBanner01: String? = nil,
-                tooltip: String? = nil,
-                eventDetailPageBanner01: String? = nil,
-                deleteAccountCompletedPageIcon01: String? = nil,
-                greenBanner: String? = nil,
-                ticketGeneralInfoIconColor: String? = nil,
-                recipientConfirmationPageBackground01: String? = nil,
-                transferCompletePageBackground01: String? = nil,
-                myGroupColor01: String? = nil) {
+    public init(primary: UIColor? = nil,
+                secondary: UIColor? = nil,
+                background: UIColor? = nil,
+                barcode: UIColor? = nil,
+                activationGreen: UIColor? = nil,
+                activationBlue: UIColor? = nil,
+                activationLightBlue: UIColor? = nil,
+                activationYellow: UIColor? = nil,
+                activationRed: UIColor? = nil,
+                activationBlack: UIColor? = nil,
+                greyBanner: UIColor? = nil,
+                redBanner: UIColor? = nil,
+                eventDetailPageBackground01: UIColor? = nil,
+                deleteAccountPageBackground01: UIColor? = nil,
+                pendingTransferItemBanner01: UIColor? = nil,
+                transferHistoryItemBanner01: UIColor? = nil,
+                transferHistoryItemBanner02: UIColor? = nil,
+                deletedTicketItemBanner01: UIColor? = nil,
+                tooltip: UIColor? = nil,
+                eventDetailPageBanner01: UIColor? = nil,
+                deleteAccountCompletedPageIcon01: UIColor? = nil,
+                greenBanner: UIColor? = nil,
+                ticketGeneralInfoIconColor: UIColor? = nil,
+                recipientConfirmationPageBackground01: UIColor? = nil,
+                transferCompletePageBackground01: UIColor? = nil,
+                myGroupColor01: UIColor? = nil) {
         self.primary = primary
         self.secondary = secondary
         self.background = background
@@ -359,32 +362,159 @@ public struct TixngoColor {
     }
     
     var json: [String: Any?] {
-        return ["primary": primary,
-                "secondary": secondary,
-                "background": background,
-                "barcode": barcode,
-                "activationGreen": activationGreen,
-                "activationBlue": activationBlue,
-                "activationLightBlue": activationLightBlue,
-                "activationYellow": activationYellow,
-                "activationRed": activationRed,
-                "activationBlack": activationBlack,
-                "greyBanner": greyBanner,
-                "redBanner": redBanner,
-                "eventDetailPageBackground01": eventDetailPageBackground01,
-                "deleteAccountPageBackground01": deleteAccountPageBackground01,
-                "pendingTransferItemBanner01": pendingTransferItemBanner01,
-                "transferHistoryItemBanner01": transferHistoryItemBanner01,
-                "transferHistoryItemBanner02": transferHistoryItemBanner02,
-                "deletedTicketItemBanner01": deletedTicketItemBanner01,
-                "tooltip": tooltip,
-                "eventDetailPageBanner01": eventDetailPageBanner01,
-                "deleteAccountCompletedPageIcon01": deleteAccountCompletedPageIcon01,
-                "greenBanner": greenBanner,
-                "ticketGeneralInfoIconColor": ticketGeneralInfoIconColor,
-                "recipientConfirmationPageBackground01": recipientConfirmationPageBackground01,
-                "transferCompletePageBackground01": transferCompletePageBackground01,
-                "myGroupColor01": myGroupColor01,
+        return ["primary": primary?.hexStringFromColor,
+                "secondary": secondary?.hexStringFromColor,
+                "background": background?.hexStringFromColor,
+                "barcode": barcode?.hexStringFromColor,
+                "activationGreen": activationGreen?.hexStringFromColor,
+                "activationBlue": activationBlue?.hexStringFromColor,
+                "activationLightBlue": activationLightBlue?.hexStringFromColor,
+                "activationYellow": activationYellow?.hexStringFromColor,
+                "activationRed": activationRed?.hexStringFromColor,
+                "activationBlack": activationBlack?.hexStringFromColor,
+                "greyBanner": greyBanner?.hexStringFromColor,
+                "redBanner": redBanner?.hexStringFromColor,
+                "eventDetailPageBackground01": eventDetailPageBackground01?.hexStringFromColor,
+                "deleteAccountPageBackground01": deleteAccountPageBackground01?.hexStringFromColor,
+                "pendingTransferItemBanner01": pendingTransferItemBanner01?.hexStringFromColor,
+                "transferHistoryItemBanner01": transferHistoryItemBanner01?.hexStringFromColor,
+                "transferHistoryItemBanner02": transferHistoryItemBanner02?.hexStringFromColor,
+                "deletedTicketItemBanner01": deletedTicketItemBanner01?.hexStringFromColor,
+                "tooltip": tooltip?.hexStringFromColor,
+                "eventDetailPageBanner01": eventDetailPageBanner01?.hexStringFromColor,
+                "deleteAccountCompletedPageIcon01": deleteAccountCompletedPageIcon01?.hexStringFromColor,
+                "greenBanner": greenBanner?.hexStringFromColor,
+                "ticketGeneralInfoIconColor": ticketGeneralInfoIconColor?.hexStringFromColor,
+                "recipientConfirmationPageBackground01": recipientConfirmationPageBackground01?.hexStringFromColor,
+                "transferCompletePageBackground01": transferCompletePageBackground01?.hexStringFromColor,
+                "myGroupColor01": myGroupColor01?.hexStringFromColor,
                 ]
     }
+}
+
+public struct TixngoButtons {
+    let primary: TixngoButtonStyle?
+    let secondary: TixngoButtonStyle?
+    let tertiary: TixngoButtonStyle?
+    let submitReverted: TixngoButtonStyle?
+    let submit: TixngoButtonStyle?
+    let cancel: TixngoButtonStyle?
+    let accept: TixngoButtonStyle?
+    let reject: TixngoButtonStyle?
+    let detail: TixngoButtonStyle?
+    let detailReverted: TixngoButtonStyle?
+    let delete: TixngoButtonStyle?
+    let actionMenuSubmitButton01: TixngoButtonStyle?
+    let ticketFreeSpaceInfoSubmitButton01: TixngoButtonStyle?
+    let updateProfileTextButton01: TixngoButtonStyle?
+    let deleteAccountPageButton01: TixngoButtonStyle?
+    let pendingTransferItemCancelButton01: TixngoButtonStyle?
+    let decisiveTransferPageAcceptButton01: TixngoButtonStyle?
+    let decisiveTransferPageRejectButton01: TixngoButtonStyle?
+    let reportIssueButton01: TixngoButtonStyle?
+    let transferTicketOptionListSubmitButton01: TixngoButtonStyle?
+    let recipientConfirmationPageSubmitButton02: TixngoButtonStyle?
+    let transferCompletePageSubmitButton01: TixngoButtonStyle?
+    let transferCompletePageSubmitButton02: TixngoButtonStyle?
+    let modalSelectorSubmitButton01: TixngoButtonStyle?
+    let myGroupTextButton01: TixngoButtonStyle?
+    
+    var json: [String: Any?] {
+        return ["primary": primary?.json,
+                "secondary": secondary?.json,
+                "tertiary": tertiary?.json,
+                "submitReverted": submitReverted?.json,
+                "submit": submit?.json,
+                "cancel": cancel?.json,
+                "accept": accept?.json,
+                "reject": reject?.json,
+                "detail": detail?.json,
+                "detailReverted": detailReverted?.json,
+                "delete": delete?.json,
+                "actionMenuSubmitButton01": actionMenuSubmitButton01?.json,
+                "ticketFreeSpaceInfoSubmitButton01": ticketFreeSpaceInfoSubmitButton01?.json,
+                "updateProfileTextButton01": updateProfileTextButton01?.json,
+                "deleteAccountPageButton01": deleteAccountPageButton01?.json,
+                "pendingTransferItemCancelButton01": pendingTransferItemCancelButton01?.json,
+                "decisiveTransferPageAcceptButton01":
+                    decisiveTransferPageAcceptButton01?.json,
+                "decisiveTransferPageRejectButton01":
+                    decisiveTransferPageRejectButton01?.json,
+                "reportIssueButton01": reportIssueButton01?.json,
+                "transferTicketOptionListSubmitButton01":
+                    transferTicketOptionListSubmitButton01?.json,
+                "recipientConfirmationPageSubmitButton02":
+                    recipientConfirmationPageSubmitButton02?.json,
+                "transferCompletePageSubmitButton01":
+                    transferCompletePageSubmitButton01?.json,
+                "transferCompletePageSubmitButton02":
+                    transferCompletePageSubmitButton02?.json,
+                "modalSelectorSubmitButton01": modalSelectorSubmitButton01?.json,
+                "myGroupTextButton01": myGroupTextButton01?.json]
+    }
+}
+
+public struct TixngoButtonStyle {
+    let background: UIColor?
+    let textColor: UIColor?
+    let textFont: TixngoFont?
+    let border: TixngoBorder?
+    
+    var json: [String: Any?] {
+        return ["background": background?.hexStringFromColor,
+                "textColor": textColor?.hexStringFromColor,
+                "textFont": textFont?.json,
+                "border": border?.json]
+    }
+}
+
+public struct TixngoFont {
+    enum FontWeight: String {
+        case bold = "bold"
+        case w100 = "w100"
+        case w200 = "w200"
+        case w300 = "w300"
+        case w400 = "w400"
+        case w500 = "w500"
+        case w600 = "w600"
+        case w700 = "w700"
+        case w800 = "w800"
+        case w900 = "w900"
+        case normal = "normal"
+    }
+    
+    let name: String?
+    let size: Double?
+    let weight: FontWeight
+    
+    var json: [String: Any?] {
+        return ["name": name,
+                "size": size,
+                "weight": weight.rawValue]
+    }
+}
+
+public struct TixngoBorder {
+    let width: Double?
+    let color: UIColor?
+    let radius: Double?
+    
+    var json: [String: Any?] {
+        return ["borderWidth": width,
+                "borderColor": color?.hexStringFromColor,
+                "radius": radius]
+    }
+}
+
+extension UIColor {
+    var hexStringFromColor: String {
+        let components = self.cgColor.components
+        let r: CGFloat = components?[0] ?? 0.0
+        let g: CGFloat = components?[1] ?? 0.0
+        let b: CGFloat = components?[2] ?? 0.0
+
+        let hexString = String.init(format: "0xff%02lX%02lX%02lX", lroundf(Float(r * 255)), lroundf(Float(g * 255)), lroundf(Float(b * 255)))
+        debugPrint("test convert: \(hexString)")
+        return hexString
+     }
 }
