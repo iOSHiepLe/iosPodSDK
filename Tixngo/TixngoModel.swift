@@ -419,6 +419,58 @@ public struct TixngoButtons {
     let modalSelectorSubmitButton01: TixngoButtonStyle?
     let myGroupTextButton01: TixngoButtonStyle?
     
+    public init(primary: TixngoButtonStyle? = nil,
+                secondary: TixngoButtonStyle? = nil,
+                tertiary: TixngoButtonStyle? = nil,
+                submitReverted: TixngoButtonStyle? = nil,
+                submit: TixngoButtonStyle? = nil,
+                cancel: TixngoButtonStyle? = nil,
+                accept: TixngoButtonStyle? = nil,
+                reject: TixngoButtonStyle? = nil,
+                detail: TixngoButtonStyle? = nil,
+                detailReverted: TixngoButtonStyle? = nil,
+                delete: TixngoButtonStyle? = nil,
+                actionMenuSubmitButton01: TixngoButtonStyle? = nil,
+                ticketFreeSpaceInfoSubmitButton01: TixngoButtonStyle? = nil,
+                updateProfileTextButton01: TixngoButtonStyle? = nil,
+                deleteAccountPageButton01: TixngoButtonStyle? = nil,
+                pendingTransferItemCancelButton01: TixngoButtonStyle? = nil,
+                decisiveTransferPageAcceptButton01: TixngoButtonStyle? = nil,
+                decisiveTransferPageRejectButton01: TixngoButtonStyle? = nil,
+                reportIssueButton01: TixngoButtonStyle? = nil,
+                transferTicketOptionListSubmitButton01: TixngoButtonStyle? = nil,
+                recipientConfirmationPageSubmitButton02: TixngoButtonStyle? = nil,
+                transferCompletePageSubmitButton01: TixngoButtonStyle? = nil,
+                transferCompletePageSubmitButton02: TixngoButtonStyle? = nil,
+                modalSelectorSubmitButton01: TixngoButtonStyle? = nil,
+                myGroupTextButton01: TixngoButtonStyle? = nil) {
+        self.primary = primary
+        self.secondary = secondary
+        self.tertiary = tertiary
+        self.submitReverted = submitReverted
+        self.submit = submit
+        self.cancel = cancel
+        self.accept = accept
+        self.reject = reject
+        self.detail = detail
+        self.detailReverted = detailReverted
+        self.delete = delete
+        self.actionMenuSubmitButton01 = actionMenuSubmitButton01
+        self.ticketFreeSpaceInfoSubmitButton01 = ticketFreeSpaceInfoSubmitButton01
+        self.updateProfileTextButton01 = updateProfileTextButton01
+        self.deleteAccountPageButton01 = deleteAccountPageButton01
+        self.pendingTransferItemCancelButton01 = pendingTransferItemCancelButton01
+        self.decisiveTransferPageAcceptButton01 = decisiveTransferPageAcceptButton01
+        self.decisiveTransferPageRejectButton01 = decisiveTransferPageRejectButton01
+        self.reportIssueButton01 = reportIssueButton01
+        self.transferTicketOptionListSubmitButton01 = transferTicketOptionListSubmitButton01
+        self.recipientConfirmationPageSubmitButton02 = recipientConfirmationPageSubmitButton02
+        self.transferCompletePageSubmitButton01 = transferCompletePageSubmitButton01
+        self.transferCompletePageSubmitButton02 = transferCompletePageSubmitButton02
+        self.modalSelectorSubmitButton01 = modalSelectorSubmitButton01
+        self.myGroupTextButton01 = myGroupTextButton01
+    }
+    
     var json: [String: Any?] {
         return ["primary": primary?.json,
                 "secondary": secondary?.json,
@@ -460,6 +512,16 @@ public struct TixngoButtonStyle {
     let textFont: TixngoFont?
     let border: TixngoBorder?
     
+    public init(background: UIColor? = nil,
+                textColor: UIColor? = nil,
+                textFont: TixngoFont? = nil,
+                border: TixngoBorder? = nil) {
+        self.background = background
+        self.textColor = textColor
+        self.textFont = textFont
+        self.border = border
+    }
+    
     var json: [String: Any?] {
         return ["background": background?.hexStringFromColor,
                 "textColor": textColor?.hexStringFromColor,
@@ -469,7 +531,7 @@ public struct TixngoButtonStyle {
 }
 
 public struct TixngoFont {
-    enum FontWeight: String {
+    public enum FontWeight: String {
         case bold = "bold"
         case w100 = "w100"
         case w200 = "w200"
@@ -487,6 +549,14 @@ public struct TixngoFont {
     let size: Double?
     let weight: FontWeight
     
+    public init(name: String? = nil,
+                size: Double? = nil,
+                weight: FontWeight = .normal) {
+        self.name = name
+        self.size = size
+        self.weight = weight
+    }
+    
     var json: [String: Any?] {
         return ["name": name,
                 "size": size,
@@ -499,6 +569,14 @@ public struct TixngoBorder {
     let color: UIColor?
     let radius: Double?
     
+    public init(width: Double? = nil,
+                color: UIColor? = nil,
+                radius: Double? = nil) {
+        self.width = width
+        self.color = color
+        self.radius = radius
+    }
+    
     var json: [String: Any?] {
         return ["borderWidth": width,
                 "borderColor": color?.hexStringFromColor,
@@ -509,9 +587,10 @@ public struct TixngoBorder {
 extension UIColor {
     var hexStringFromColor: String {
         let components = self.cgColor.components
-        let r: CGFloat = components?[0] ?? 0.0
-        let g: CGFloat = components?[1] ?? 0.0
-        let b: CGFloat = components?[2] ?? 0.0
+        let count = components?.count ?? 0
+        let r: CGFloat = count >= 1 ? (components?[0] ?? 0.0) : 0.0
+        let g: CGFloat = count >= 2 ? (components?[1] ?? 0.0) : 0.0
+        let b: CGFloat = count >= 3 ? (components?[2] ?? 0.0) : 0.0
 
         let hexString = String.init(format: "0xff%02lX%02lX%02lX", lroundf(Float(r * 255)), lroundf(Float(g * 255)), lroundf(Float(b * 255)))
         debugPrint("test convert: \(hexString)")
